@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Medifé</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f5f7;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.10);
+    }
+
+    h1 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 16px;
+      margin-bottom: 6px;
+    }
+
+    input, select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      border: none;
+      border-radius: 7px;
+      background: #222;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Ficha para cotizar Medifé</h1>
+  <div class="subtitle">
+    Completar todos los datos del cliente
+  </div>
+
+  <form>
+
+    <label>Nombre y apellido del afiliado</label>
+    <input type="text" required>
+
+    <label>DNI</label>
+    <input type="text" required>
+
+    <label>Localidad</label>
+    <input type="text" required>
+
+    <label>¿Cuántas personas integran el grupo familiar?</label>
+    <input type="number" min="1" required>
+
+    <label>Edades del grupo familiar</label>
+    <input type="text" placeholder="Ej.: 35, 32, 8 y 5" required>
+
+    <label>Situación laboral</label>
+    <select required>
+      <option value="">Seleccionar</option>
+      <option>Particular</option>
+      <option>Monotributista</option>
+      <option>Empleado con recibo de sueldo</option>
+    </select>
+
+    <label>Categoría de monotributo</label>
+    <input type="text" placeholder="Completar si corresponde">
+
+    <label>Procedencia</label>
+    <select required>
+      <option value="">Seleccionar</option>
+      <option>Obra Social</option>
+      <option>Prepaga</option>
+      <option>Particular</option>
+    </select>
+
+    <label>¿Cuál es la obra social o prepaga actual?</label>
+    <input type="text">
+
+    <button type="submit">Enviar datos</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
